@@ -1,5 +1,8 @@
 .DS_Store
 *.log
 
-# 上線用 WebP；PNG 保留在本機當設計原檔即可
+# 上線用 WebP；原稿保留在本機即可
 assets/*.png
+assets/*.jpg
+assets/*.jpeg
+assets/*.tiff

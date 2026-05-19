@@ -173,3 +173,264 @@ body {
   line-height: 1.5;
   text-align: center;
 }
+
+/* 選購區（參考圖一風格） */
+.shop-section {
+  --coral: #e66a55;
+  --coral-deep: #d45642;
+  --peach: #fff6f2;
+  --peach-border: #f5d9cf;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 20px 14px 28px;
+  background: var(--peach);
+}
+
+.shop-panel--coupon {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 8px 24px rgba(230, 106, 85, 0.12);
+  margin-bottom: 20px;
+}
+
+.shop-title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--coral);
+  text-align: center;
+}
+
+.shop-hint {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.shop-hint strong {
+  color: var(--coral);
+  letter-spacing: 0.05em;
+}
+
+.coupon-form {
+  display: flex;
+  gap: 8px;
+}
+
+.coupon-input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #e0d5d0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.coupon-input:focus {
+  outline: 2px solid rgba(230, 106, 85, 0.35);
+  border-color: var(--coral);
+}
+
+.coupon-btn {
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.coupon-btn:active {
+  background: var(--coral-deep);
+}
+
+.coupon-msg {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  min-height: 1.2em;
+}
+
+.coupon-msg--ok {
+  color: #2a8f4a;
+}
+
+.coupon-msg--err {
+  color: #c0392b;
+}
+
+.shop-heading {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--coral);
+  text-align: center;
+}
+
+.plan-scroll-hint {
+  margin: 0 0 10px;
+  font-size: 0.75rem;
+  color: #999;
+  text-align: center;
+}
+
+.plan-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 14px;
+  padding: 4px 14px 18px;
+  margin: 0 -14px;
+  scrollbar-width: none;
+}
+
+.plan-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.plan-scroll::after {
+  content: "";
+  flex: 0 0 2px;
+}
+
+.plan-card {
+  position: relative;
+  flex: 0 0 min(82vw, 300px);
+  width: min(82vw, 300px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: #fff;
+  border: 2px solid var(--peach-border);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  margin-bottom: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.plan-card--featured {
+  border-color: var(--coral);
+  box-shadow: 0 8px 28px rgba(230, 106, 85, 0.15);
+}
+
+.plan-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.plan-badge--hot {
+  background: linear-gradient(90deg, #f0a030, var(--coral));
+}
+
+.plan-name {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.plan-photo {
+  margin: 0 0 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f4fc;
+}
+
+.plan-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.plan-price {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.price-original,
+.price-sale {
+  margin: 0;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.price-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.price-value--sale {
+  color: var(--coral);
+  font-size: 1.75rem;
+}
+
+.price-save {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--coral);
+}
+
+.shop-section.is-discounted .price-original .price-value {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.shop-section.is-discounted .price-sale,
+.shop-section.is-discounted .price-save {
+  display: block !important;
+}
+
+.shop-section.is-discounted .price-sale[hidden],
+.shop-section.is-discounted .price-save[hidden] {
+  display: block !important;
+}
+
+.plan-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 48px;
+  border-radius: 12px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(230, 106, 85, 0.35);
+}
+
+.plan-buy:active {
+  background: var(--coral-deep);
+}

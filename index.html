@@ -22,8 +22,8 @@
         <img
           class="screen"
           src="assets/01.webp"
-          width="941"
-          height="1672"
+          width="940"
+          height="1527"
           alt="第 1 屏"
           loading="eager"
           decoding="async"
@@ -165,9 +165,9 @@
       <figure class="screen-wrap">
         <img
           class="screen"
-          src="assets/12.webp"
-          width="941"
-          height="1672"
+          src="assets/35.webp"
+          width="1122"
+          height="1402"
           alt="第 12 屏"
           loading="lazy"
           decoding="async"
@@ -426,17 +426,129 @@
         />
       </figure>
 
-      <figure class="screen-wrap anchor" id="section-combo">
-        <img
-          class="screen"
-          src="assets/35.webp"
-          width="1122"
-          height="1402"
-          alt="第 35 屏"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
+      <section class="shop-section anchor" id="section-shop" aria-label="選購方案與折扣碼">
+        <div class="shop-panel shop-panel--coupon">
+          <h2 class="shop-title">🎁 輸入專屬折扣碼</h2>
+          <p class="shop-hint">請輸入 <strong>000054</strong> 即刻享有粉絲專屬優惠價</p>
+          <form class="coupon-form" id="coupon-form">
+            <input
+              type="text"
+              class="coupon-input"
+              id="coupon-input"
+              inputmode="numeric"
+              autocomplete="off"
+              placeholder="請輸入折扣碼"
+              aria-label="折扣碼"
+            />
+            <button type="submit" class="coupon-btn">套用折扣</button>
+          </form>
+          <p class="coupon-msg" id="coupon-msg" role="status" aria-live="polite"></p>
+        </div>
+
+        <h2 class="shop-heading">選擇你的日常補給組合</h2>
+        <p class="plan-scroll-hint">← 左右滑動查看更多方案 →</p>
+
+        <div class="plan-scroll" role="region" aria-label="方案列表，可左右滑動">
+        <article class="plan-card" data-plan="trial">
+          <span class="plan-badge">方案一</span>
+          <h3 class="plan-name">10日體驗組</h3>
+          <div class="plan-photo">
+            <img
+              src="assets/plan-trial.webp"
+              width="819"
+              height="1024"
+              alt="10日體驗組產品圖"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="plan-price" data-original="1580" data-sale="880" data-save="700">
+            <p class="price-original">
+              <span class="price-label">原價</span>
+              <span class="price-value">NT$ 1,580</span>
+            </p>
+            <p class="price-sale" hidden>
+              <span class="price-label">輸入折扣碼後</span>
+              <span class="price-value price-value--sale">NT$ 880</span>
+            </p>
+            <p class="price-save" hidden>省 NT$ 700</p>
+          </div>
+          <a
+            class="plan-buy"
+            href="https://s.luckycat.no8.io/link/channels/1EYvoZACx5"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-plan-link="trial"
+            >🛒 點此選購</a>
+        </article>
+
+        <article class="plan-card" data-plan="basic">
+          <span class="plan-badge">方案二</span>
+          <h3 class="plan-name">消化道基礎調整組</h3>
+          <div class="plan-photo">
+            <img
+              src="assets/plan-basic.webp"
+              width="819"
+              height="1024"
+              alt="消化道基礎調整組產品圖"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="plan-price" data-original="3980" data-sale="2320" data-save="1660">
+            <p class="price-original">
+              <span class="price-label">原價</span>
+              <span class="price-value">NT$ 3,980</span>
+            </p>
+            <p class="price-sale" hidden>
+              <span class="price-label">輸入折扣碼後</span>
+              <span class="price-value price-value--sale">NT$ 2,320</span>
+            </p>
+            <p class="price-save" hidden>省 NT$ 1,660</p>
+          </div>
+          <a
+            class="plan-buy"
+            href="https://s.luckycat.no8.io/link/channels/1EYvoZACx5"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-plan-link="basic"
+            >🛒 點此選購</a>
+        </article>
+
+        <article class="plan-card plan-card--featured" data-plan="premium">
+          <span class="plan-badge plan-badge--hot">方案三 · 最划算</span>
+          <h3 class="plan-name">別再讓底子垮掉組</h3>
+          <div class="plan-photo">
+            <img
+              src="assets/plan-premium.webp"
+              width="819"
+              height="1024"
+              alt="別再讓底子垮掉組產品圖"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="plan-price" data-original="7960" data-sale="4540" data-save="3420">
+            <p class="price-original">
+              <span class="price-label">原價</span>
+              <span class="price-value">NT$ 7,960</span>
+            </p>
+            <p class="price-sale" hidden>
+              <span class="price-label">輸入折扣碼後</span>
+              <span class="price-value price-value--sale">NT$ 4,540</span>
+            </p>
+            <p class="price-save" hidden>省 NT$ 3,420</p>
+          </div>
+          <a
+            class="plan-buy"
+            href="https://s.luckycat.no8.io/link/channels/1EYvoZACx5"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-plan-link="premium"
+            >🛒 點此選購</a>
+        </article>
+        </div>
+      </section>
 
       <figure class="screen-wrap">
         <img
@@ -458,7 +570,7 @@
 
     <nav class="sticky-cta" aria-label="導購快捷按鈕">
       <div class="sticky-cta-inner">
-        <a class="btn-cta btn-cta--primary" href="#section-combo">
+        <a class="btn-cta btn-cta--primary" href="#section-shop">
           查看今日組合
           <span class="arrow" aria-hidden="true">→</span>
         </a>
@@ -468,5 +580,6 @@
         </a>
       </div>
     </nav>
+    <script src="shop.js"></script>
   </body>
 </html>
