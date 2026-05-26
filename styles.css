@@ -434,3 +434,73 @@ body {
 .plan-buy:active {
   background: var(--coral-deep);
 }
+
+/* 左下角購買通知 toast */
+.social-toast {
+  position: fixed;
+  z-index: 90;
+  left: max(12px, calc(50% - 215px));
+  bottom: calc(var(--cta-h) + env(safe-area-inset-bottom, 0) + 14px);
+  max-width: min(300px, calc(100vw - 24px));
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+.social-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-toast[hidden] {
+  display: none;
+}
+
+.social-toast__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(123, 67, 151, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.social-toast__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: #3cb371;
+  box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.25);
+}
+
+.social-toast__text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+.social-toast__text strong {
+  color: #222;
+  font-weight: 700;
+}
+
+.social-toast__plan {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-toast {
+    transition: none;
+    transform: none;
+  }
+}

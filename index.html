@@ -94,8 +94,8 @@
         <img
           class="screen"
           src="assets/07.webp"
-          width="941"
-          height="1672"
+          width="977"
+          height="1610"
           alt="第 7 屏"
           loading="lazy"
           decoding="async"
@@ -328,6 +328,23 @@
       <code>href</code> 改成您的賣場網址。
     </p>
 
+    <div
+      class="social-toast"
+      id="social-toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
+      <div class="social-toast__card">
+        <span class="social-toast__dot" aria-hidden="true"></span>
+        <p class="social-toast__text">
+          <strong id="social-toast-name">王小姐</strong> 剛剛購買了
+          <span class="social-toast__plan" id="social-toast-plan">10日體驗組</span>
+        </p>
+      </div>
+    </div>
+
     <nav class="sticky-cta" aria-label="導購快捷按鈕">
       <div class="sticky-cta-inner">
         <a class="btn-cta btn-cta--primary" href="#section-shop">
@@ -341,5 +358,6 @@
       </div>
     </nav>
     <script src="shop.js"></script>
+    <script src="social-toast.js"></script>
   </body>
 </html>
